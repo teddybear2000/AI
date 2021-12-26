@@ -1,6 +1,8 @@
 # AI
 Take drugs can be analyzed?Projects
 //นับจำนวนยา
+//opencv คือ library open source ที่ใช้สำหรับการประมวลภาพขั้นพื้นฐาน เช่น การเบลอภาพ การรู้จำวัตถุต่างๆในภาพ หรือการเพิ่มคุณภาพให้กับภาพ วิดีโอ 
+//imutils คือ library เบื้องต้นของ image processing เช่น การหมุนภาพ กลับภาพ ปรับขนาด
 import cv2
 import imutils
 
