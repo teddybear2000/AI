@@ -13,6 +13,7 @@ gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 
 //การ threshold เป็นการนำภาพ 1 channel หรือ grayscle image มาแปลงค่า intesity ของแต่ละ pixel ให้เหลือเพียง 2 ค่า คือ 0(ดำ) กับ 255(ขาว) โดยเรียกภาพที่มีค่า intensity เพียง 2 ค่า ว่า “Binary Image”
+//นำภาพสีเทามาทำการ threshold เพื่อทำให้รู้ขอบของยา
 T, thresh = cv2.threshold(gray, 20, 255, cv2.THRESH_BINARY)
 #cv2.imshow("threshold", thresh)
 
@@ -54,7 +55,11 @@ from PIL import Image
 import numpy as np
 from matplotlib import pyplot as plt
 
+//เปิดรูปด้วย Image.open กำหนดตัวแปร A ในการเก็บค่า array และทำการส่งค่าคืน
 A = Image.open("pills.jpg")
+
+
+//R(red) = A[:,:,0] , G(green) = A[:,:,1], B(blue) = A[:,:,2] หมายเลขด้านหลัง
 A = np.array(A)
 print(A.shape)
 R = A[:,:,0]
@@ -72,19 +77,30 @@ plt.show()
 
 
 // บอกสีของยา color2
+//ในโค้ดนับจำนวนยา ใช้นำข้อมูลเข้าโดย opencv กับ numpy
+//โค้ดนี้เป็นการแสดงสีตามยา และสามารถนำไปใช้แบ่งกลุ่มยาตามสีได้ 
+
+
 import cv2
 import numpy
 
+//ใน loop while จะมีการอ่านภาพจากไฟล์ และตั้งค่าขนาด
 while True:
 
     img = cv2.imread("pills2.jpg")
     img = cv2.resize(img,(500,300))
-
+     
+     // มีการรับค่าจากคีบอร์ด เพื่อรับตัวเลขที่จะแสดงผลของยาแต่ละสี 
     num = input("Enter you number :")
+    
+    //โดยในเงื่อนไข if จะทำหน้าที่ในการ เก็บค่าของสีด้วย numpy ตัวแปร lower เก็บค่าสีที่ทึบของยานั้น
     if num == "1":
         lower = numpy.array([27, 5, 207])
+        
+     // ส่วนตัวแปร ตัวแปร upper เก็บค่าสีที่สว่างของยานั้น ในarray จะเก็บค่าดังนี้ [blue,green,red] 
         upper = numpy.array([43, 45, 247])
 
+      // โดยจะมีตัวแปร mask ในการเก็บค่าสี และตัวแปร result เก็บค่าของภาพระดับบิตของตัวแปร img มา and กับค่าของตัวแปร mask
         mask = cv2.inRange(img, lower, upper)
         result = cv2.bitwise_and(img, img, mask=mask)
 
@@ -141,6 +157,9 @@ while True:
         break
 
 cv2.destroyAllWindows()
-//ดูคำอธิบายในนี้เพิ่มเติมได้นะคะ
+//ดูคำอธิบายในพ้อยเพิ่มเติมได้นะคะ
 https://www.canva.com/design/DAEzmxHG_Kk/yjhWGdbeDgzdsdYknJRZ5A/view?utm_content=DAEzmxHG_Kk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+//ไดฟ์รูปภาพยาที่ถ่ายเองบวกกับที่นำมาจาก internet
+//https://drive.google.com/drive/folders/1-RMN0v9p26bIqGR54CyXMYh2m5ahHViN?usp=sharing
 
