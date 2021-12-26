@@ -139,5 +139,6 @@ while True:
         break
 
 cv2.destroyAllWindows()
-
+//ดูคำอธิบายในนี้เพิ่มเติมได้นะคะ
+https://www.canva.com/design/DAEzmxHG_Kk/yjhWGdbeDgzdsdYknJRZ5A/view?utm_content=DAEzmxHG_Kk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
