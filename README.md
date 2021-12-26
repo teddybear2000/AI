@@ -163,3 +163,11 @@ https://www.canva.com/design/DAEzmxHG_Kk/yjhWGdbeDgzdsdYknJRZ5A/view?utm_content
 //ไดฟ์รูปภาพยาที่ถ่ายเองบวกกับที่นำมาจาก internet
 //https://drive.google.com/drive/folders/1-RMN0v9p26bIqGR54CyXMYh2m5ahHViN?usp=sharing
 
+
+อ้างอิง:
+https://www.youtube.com/watch?v=Wy1ZGAAJTY8
+https://www.youtube.com/watch?v=KRZIV1RBHSI&t=9s
+
+สุดท้ายขอขอบคุณอาจารย์,เพื่อนๆและแหล่งความรู้ทุกแห่ง จนก่อให้งานครั้งนี้สำเร็จลุล่วงไปได้ด้วยดี
+และขอขอบคุณที่ทุกคนที่ได้เข้ามาพูดคุย แลกเปลี่ยน แนะนำ รวมถึงรับชมการบรรยายครั้งนี้
+จากนางสาวซอนญ่า  ชนะการ  รหัสนักศึกษา 62102355 และ นางสาวศุภจิตรา ขาวเนียม รหัสนักศึกษา 62109574
