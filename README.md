@@ -3,6 +3,7 @@ Take drugs can be analyzed?Projects
 //นับจำนวนยา
 //opencv คือ library open source ที่ใช้สำหรับการประมวลภาพขั้นพื้นฐาน เช่น การเบลอภาพ การรู้จำวัตถุต่างๆในภาพ หรือการเพิ่มคุณภาพให้กับภาพ วิดีโอ 
 //imutils คือ library เบื้องต้นของ image processing เช่น การหมุนภาพ กลับภาพ ปรับขนาด
+//การ threshold เป็นการนำภาพ 1 channel หรือ grayscle image มาแปลงค่า intesity ของแต่ละ pixel ให้เหลือเพียง 2 ค่า คือ 0(ดำ) กับ 255(ขาว) โดยเรียกภาพที่มีค่า intensity เพียง 2 ค่า ว่า “Binary Image”
 import cv2
 import imutils
 
@@ -43,6 +44,9 @@ cv2.imshow("counter", clone)
 cv2.waitKey(0)
 
 // บอกสีของยา color1
+//PLT ย่อมาจาก “Python Imaging Library” เพิ่มการรองรับสำหรับการเปิดการจัดการและการบันทึกไฟล์รูปภาพหลายรูปแบบ
+//numpy เป็นโมดูลเสริมที่มีฟังก์ชันเกี่ยวกับคณิตศาสตร์และการคำนวณต่างๆ โดยทั่วไปจะเกี่ยวกับการจัดข้อมูล arra
+//matplotlib  เป็นการสร้างกราฟใน python
 import cv2
 from PIL import Image
 import numpy as np
