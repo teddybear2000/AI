@@ -2,15 +2,17 @@
 Take drugs can be analyzed?Projects
 //นับจำนวนยา
 //opencv คือ library open source ที่ใช้สำหรับการประมวลภาพขั้นพื้นฐาน เช่น การเบลอภาพ การรู้จำวัตถุต่างๆในภาพ หรือการเพิ่มคุณภาพให้กับภาพ วิดีโอ 
-//imutils คือ library เบื้องต้นของ image processing เช่น การหมุนภาพ กลับภาพ ปรับขนาด
-//การ threshold เป็นการนำภาพ 1 channel หรือ grayscle image มาแปลงค่า intesity ของแต่ละ pixel ให้เหลือเพียง 2 ค่า คือ 0(ดำ) กับ 255(ขาว) โดยเรียกภาพที่มีค่า intensity เพียง 2 ค่า ว่า “Binary Image”
+
 import cv2
-import imutils
+//imutils คือ library เบื้องต้นของ image processing เช่น การหมุนภาพ กลับภาพ ปรับขนาด
+import imutils 
 
 image = cv2.imread("pills1.jpg")
 image = imutils.resize(image, width=500)
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
+
+//การ threshold เป็นการนำภาพ 1 channel หรือ grayscle image มาแปลงค่า intesity ของแต่ละ pixel ให้เหลือเพียง 2 ค่า คือ 0(ดำ) กับ 255(ขาว) โดยเรียกภาพที่มีค่า intensity เพียง 2 ค่า ว่า “Binary Image”
 T, thresh = cv2.threshold(gray, 20, 255, cv2.THRESH_BINARY)
 #cv2.imshow("threshold", thresh)
 
